@@ -1,0 +1,12 @@
+<h1>New Match</h1>
+
+<%= form_for @match do |f| %>
+    <h2>Select Player 1</h2>
+    <%= f.collection_select(:player1_id, Player.all, :id, :name) %>
+    <h2>Select Player 2</h2>
+    <%= f.collection_select(:player1_id, Player.all, :id, :name) %>
+    <br>
+    <%= f.submit %>
+<% end %>
+
+<h2>Select Number of Games</h2>

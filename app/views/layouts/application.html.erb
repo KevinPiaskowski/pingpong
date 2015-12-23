@@ -2,13 +2,24 @@
 <html>
 <head>
   <title>PingPongApp</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<nav class="clearfix">
+  <ul>
+    <li><%= link_to "Home", root_path %></li>
+    <li><%= link_to "New Match", new_match_path%></li>
+    <li><%= link_to "Players", players_path %></li>
+    <li>Login field</li>
+  </ul>
+</nav>
 
+<secton class="main-content">
 <%= yield %>
+</secton>
 
 </body>
 </html>
